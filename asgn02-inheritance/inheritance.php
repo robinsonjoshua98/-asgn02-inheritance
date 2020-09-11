@@ -2,9 +2,9 @@
 
 class motorVehicles {
     
-    var $wheelCount;
-    var $seatsAvailable;
-    var $is_roadLegal = false;
+    public $wheelCount;
+    public $seatsAvailable;
+    public $is_roadLegal = false;
 
     function aboutVehicle() {
         return "This motor vehicle has $this->wheelCount wheels and $this->seatsAvailible many seats availible";
@@ -13,12 +13,12 @@ class motorVehicles {
 }
 
 class Truck extends motorVehicles {
-    var $wheelCount = 4;
-    var $seatsAvailable = 6;
-    var $is_roadLegal = true;
+    public $wheelCount = 4;
+    public $seatsAvailable = 6;
+    public $is_roadLegal = true;
 
-    var $has_bed = true;
-    var $fourWheelDrive = true; 
+    protected $has_bed = true;
+    protected $fourWheelDrive = true; 
     
     function truckFunction() {
         return "This truck has four wheel drive and has a full size bed!";
@@ -28,9 +28,9 @@ class Truck extends motorVehicles {
 }
 
 class Car extends motorVehicles {
-    var $wheelCount = 4;
-    var $seatsAvailable = 5;
-    var $is_roadLegal = true;function
+    public $wheelCount = 4;
+    public $seatsAvailable = 5;
+    public $is_roadLegal = true;function
     
     carFunction () {
         return "Cars are good for fuel efficency!";
@@ -40,9 +40,9 @@ class Car extends motorVehicles {
 }
 
 class Van extends motorVehicles {
-    var $wheelCount = 4;
-    var $seatsAvailable = 7;
-    var $is_roadLegal = true;
+    public $wheelCount = 4;
+    public $seatsAvailable = 7;
+    public $is_roadLegal = true;
     
     function vanFunction () {
         return "Vans are the perfect family vehicle!";
@@ -51,9 +51,9 @@ class Van extends motorVehicles {
 }
 
 class Motorcycle extends motorVehicles {
-    var $wheelCount = 2;
-    var $seatsAvailable = 2;
-    var $is_roadLegal = true;
+    public $wheelCount = 2;
+    public $seatsAvailable = 2;
+    public $is_roadLegal = true;
 
     function motoFunction () {
         return "Motorcycles are a fun adrenaline rush for you and maybe one other person to enjoy!";
