@@ -17,4 +17,9 @@ class Loveseat extends Sofa {
   protected static $identity = 'Loveseat class';
 }
 
+Sofa::identity_test();
+Echo "<hr />";
+Loveseat::identity_test();
+
+
 ?>

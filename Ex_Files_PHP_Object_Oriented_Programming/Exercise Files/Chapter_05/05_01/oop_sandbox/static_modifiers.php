@@ -19,4 +19,14 @@ class Student {
 
 }
 
+echo Student::$grades[0]. "<br />";
+echo Student::motto() ."<br />";
+
+
+echo Student:: count() ."<br />";
+
+student::add_student();
+
+echo Student:: count() ."<br />";
+
 ?>

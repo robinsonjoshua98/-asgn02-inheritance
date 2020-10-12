@@ -7,6 +7,9 @@ class Sofa {
   public $seats = 3;
   public $arms = 2;
 
+  public function __construct() {
+    self::$instance_count++;
+  }
 }
 
 class Couch extends Sofa {
