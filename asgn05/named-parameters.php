@@ -2,11 +2,10 @@
 
 include 'connect.php';
 
-$stmt = $db->prepare("SELECT * FROM names WHERE firstname = ?");
-$id = 3;
-$names = array('Hettie', 'Emma', 'Freddie');
-foreach($names as $name) {
-    $stmt->bindParam(1, $name);
+$stmt = $db->prepare("SELECT * FROM names WHERE firstname = :firstname");
+
+
+    $stmt->bindValue(':firstname', 'Andy',PDO::PARAM_STR);
     $stmt->execute();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -15,5 +14,5 @@ foreach($names as $name) {
         $postcode = htmlentities($row['postcode']);
 
         echo $firstname . ' ' . $lastname . ' ' . $postcode . '<br>';}
- }
+ 
 ?>
